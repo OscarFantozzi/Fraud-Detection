@@ -65,8 +65,7 @@ With the first version, I obtained an **F1-Score of 0.44** after feature enginee
 ### Version 3
 
 Before proceeding with version 3, I analyzed the behavior of fraudulent and non-fraudulent transactions and noticed that fraudulent transactions tend to have a longer time interval between them compared to legitimate transactions, possibly to camouflage and avoid detection. Additionally, the average value of fraudulent transactions was higher than that of legitimate transactions.
-![Texto alternativo](img/img12.png)
-![Texto alternativo](img/img13.png)
+
 
 Based on these insights, I derived new features such as the average time between transactions and the mean and standard deviation of transaction values. After tuning the hyperparameters again with the dataset containing the new features, I obtained an **F1-Score of 0.72** on the training data. The creation of new features played a crucial role in this improvement.
 
