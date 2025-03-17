@@ -61,9 +61,12 @@ The first step was to train the models with the original data, without any addit
 ### Version 1
 
 In the first version, I created temporal features, such as the time difference between transactions and the number of daily transactions. I used **SelectKBest** from scikit-learn to select the most relevant features after tuning the hyperparameters with **Optuna**. Although it may seem counterintuitive to tune the hyperparameters before selecting features, research indicates that doing so can create a more efficient model, as the tuned model can discard or include features more accurately. After testing several **k** combinations, the best selection was **32 features**.
+
 ![Texto alternativo](img/img8.png)
-![Texto alternativo](img/img9.png)
+
+
 ![Texto alternativo](img/img10.png)
+
 ### Version 2
 
 With the first version, I obtained an **F1-Score of 0.44** after feature engineering, hyperparameter tuning, and selecting the best features.
@@ -78,8 +81,11 @@ Before proceeding with version 3, I analyzed the behavior of fraudulent and non-
 Based on these insights, I derived new features such as the average time between transactions and the mean and standard deviation of transaction values. After tuning the hyperparameters again with the dataset containing the new features, I obtained an **F1-Score of 0.72** on the training data. The creation of new features played a crucial role in this improvement.
 
 One key idea for feature selection came from Kaggle Grandmaster **Mario Filho**, who suggests that feature engineering should consider aggregations, rolling averages, and lags between dates. You can view his video [here](https://www.youtube.com/watch?v=ft77eXtn30Q&ab_channel=MarioFilhoEnglish).
+
 ![Texto alternativo](img/img14.png)
+
 ![Texto alternativo](img/img15.png)
+
 
 The model's performance significantly improved with the introduction of new features, such as **rolling_min_3** (last 3 transactions) and **time_diff_seconds** (time difference in seconds between consecutive transactions).
 
