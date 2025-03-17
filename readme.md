@@ -22,14 +22,22 @@ The objective is to identify the highest number of fraudulent transactions and c
 The following metrics were used to evaluate the model:
 
 - **Accuracy**: Percentage of correct predictions. In fraud detection, accuracy can be high by predicting "non-fraud" all the time, which would not be useful.
+  
 ![Texto alternativo](img/img3.png)
+
+
 - **Precision**: The proportion of transactions predicted as fraud that are actually fraudulent.
+
 ![Texto alternativo](img/img4.png)
 
 - **Recall**: The proportion of fraudulent transactions correctly identified by the model.
+
 ![Texto alternativo](img/img5.png)
+
 - **F1-Score**: The harmonic mean of precision and recall, providing a balance between both.
+
 ![Texto alternativo](img/img6.png)
+
 - **AUC (Area Under the ROC Curve)**: Measures the model's ability to distinguish between fraud and non-fraud classes.
 
 
